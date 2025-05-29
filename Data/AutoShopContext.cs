@@ -16,6 +16,22 @@ namespace AutoShopManager.Data
         public DbSet<Partes> Partes { get; set; }
         public DbSet<Citas> Citas { get; set; }
 
+        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<Citas>()
+                .HasOne(c => c.Vehiculo)
+                .WithMany()
+                .HasForeignKey(c => c.IdVehiculo)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Citas>()
+                .HasOne(c => c.Cliente)
+                .WithMany()
+                .HasForeignKey(c => c.IdCliente)
+                .OnDelete(DeleteBehavior.Restrict); 
+        }
     }
 }
