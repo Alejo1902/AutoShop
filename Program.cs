@@ -8,6 +8,8 @@ builder.Services.AddDbContext<AutoShopContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("AutoShopConnection")));
 
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<AutoShopContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("AutoShopConnection")));
 
 var app = builder.Build();
 
