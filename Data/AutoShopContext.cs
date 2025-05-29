@@ -10,6 +10,14 @@ namespace AutoShopManager.Data
         {
         }
 
+        public AutoShopContext(DbContextOptions options) : base(options)
+        {
+        }
+
+        protected AutoShopContext()
+        {
+        }
+
         public DbSet<Vehiculo> Vehiculos { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Reparacion> Reparaciones { get; set; }
