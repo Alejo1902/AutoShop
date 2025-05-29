@@ -1,0 +1,37 @@
+﻿@page
+@model AutoShop.Pages.Vehiculos.IndexModel
+@{
+	ViewData["Title"] = "Vehículos";
+}
+<h1>Vehiculos </h1>
+<table class="table">
+	<thead>
+	<tr>
+		<th>
+				@Html.DisplayNameFor(model => model.Vehiculos[0].IdVehiculo)
+		</th>
+		<th>
+				@Html.DisplayNameFor(model => model.Vehiculos[0].Marca)
+		</th>
+		<th>
+				@Html.DisplayNameFor(model => model.Vehiculos[0].Modelo)
+		</th>
+		<th>
+				@Html.DisplayNameFor(model => model.Vehiculos[0].Anio)
+		</th>
+		<th>
+				@Html.DisplayNameFor(model => model.Vehiculos[0].Color)
+		</th>
+		<th>
+				@Html.DisplayNameFor(model => model.Vehiculos[0].Placa)
+		</th>
+		<th>
+				@Html.DisplayNameFor(model => model.Vehiculos[0].IdCliente)
+		</th>
+		<th>
+				@Html.DisplayNameFor(model => model.Vehiculos[0].Cliente)
+		</th>
+	</tr>
+
+	</thead>
+</table>
