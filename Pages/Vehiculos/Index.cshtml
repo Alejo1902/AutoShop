@@ -31,6 +31,10 @@
 		<th>
 				@Html.DisplayNameFor(model => model.Vehiculos[0].Cliente)
 		</th>
+		<td>
+				<a asp-page="./Edit" asp-route-id="IdVehiculo" class="btn btn-Warning">Delete</a>"
+				<a asp-page="./Delete" asp-route-id="IdVehiculo" class="btn btn-danger">Edit</a>"
+		</td>
 	</tr>
 
 	</thead>
