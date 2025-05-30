@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using AutoShopManager.Models;
 
+
 namespace AutoShopManager.Data
 {
     public class AutoShopContext : DbContext

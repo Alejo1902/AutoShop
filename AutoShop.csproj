@@ -21,10 +21,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\Clientes\Create\" />
-    <Folder Include="Pages\Clientes\Delete\" />
-    <Folder Include="Pages\Clientes\Edit\" />
-  </ItemGroup>
-
 </Project>

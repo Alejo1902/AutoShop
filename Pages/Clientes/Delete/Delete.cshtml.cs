@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace AutoShop.Pages.Vehiculos.Eliminar
+namespace AutoShop.Pages.Clientes.Delete
 {
     public class DeleteModel : PageModel
     {
@@ -14,32 +14,32 @@ namespace AutoShop.Pages.Vehiculos.Eliminar
             context = context;
         }
         [BindProperty]
-        public Vehiculo Vehiculos { get; set; } = default!;
+        public Cliente cliente { get; set; } = default!;
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || context.Vehiculos == null)
+            if (id == null || context.Clientes == null)
             {
                 return NotFound();
             }
-            var Vehiculo = await context.Vehiculos.FirstOrDefaultAsync(m => m.IdVehiculo == id);
-            if (Vehiculo == null)
+            var Cliente = await context.Clientes.FirstOrDefaultAsync(m => m.IdCliente == id);
+            if (Cliente == null)
             {
                 return NotFound();
             }
-            Vehiculos = Vehiculo;
+            Cliente = Cliente;
             return Page();
         }
         public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (id == null || context.Vehiculos == null)
+            if (id == null || context.Clientes == null)
             {
                 return NotFound();
             }
-            var Vehiculo = await context.Vehiculos.FindAsync(id);
-            if (Vehiculo != null)
+            var Clientes = await context.Clientes.FindAsync(id);
+            if (Clientes != null)
             {
-                Vehiculos = Vehiculo;
-                context.Vehiculos.Remove(Vehiculo);
+                cliente = cliente;
+                context.Clientes.Remove(cliente);
                 await context.SaveChangesAsync();
             }
             return RedirectToPage("./Index");

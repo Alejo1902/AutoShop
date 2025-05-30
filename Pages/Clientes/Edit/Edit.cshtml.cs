@@ -3,8 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Razor;
+using AutoShopManager.Models;
 
-namespace AutoShop.Pages.Vehiculos.Editar
+namespace AutoShop.Pages.Clientes.Edit
 {
     public class EditModel : PageModel
     {
@@ -17,16 +18,16 @@ namespace AutoShop.Pages.Vehiculos.Editar
         public Vehiculo Vehiculo { get; set; } = default!;
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Vehiculos == null)
+            if (id == null || _context.Clientes == null)
             {
                 return NotFound();
             }
-            var vehiculo = await _context.Vehiculos.FirstOrDefaultAsync(m => m.IdVehiculo == id);
-            if (vehiculo == null)
+            var cliente = await _context.Clientes.FirstOrDefaultAsync(m => m.IdCliente == id);
+            if (cliente == null)
             {
                 return NotFound();
             }
-            Vehiculo = vehiculo;
+            cliente = cliente;
             return Page();
         }
         public async Task<IActionResult> OnPostAsync()
@@ -42,7 +43,7 @@ namespace AutoShop.Pages.Vehiculos.Editar
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!VehiculoExists(Vehiculo.IdVehiculo))
+                if (!ClientesExists(Clientes.IdCliente))
                 {
                     return NotFound();
                 }
@@ -53,9 +54,9 @@ namespace AutoShop.Pages.Vehiculos.Editar
             }
             return RedirectToPage("./Index");
         }
-        private bool VehiculosExists(int id)
+        private bool ClientesExists(int id)
         {
-            return (_context.Vehiculos.Any(e => e.IdVehiculo == id)).GetValueOrDefault();
+            return (_context.Clientes.Any(e => e.IdCliente == id)).GetValueOrDefault();
         }
     }
 }
