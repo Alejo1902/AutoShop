@@ -1,0 +1,60 @@
+﻿@page
+@model AutoShop.Pages.Reparaciones.Delete.DeleteModel
+@{
+	ViewData["Title"] = "Eliminar Cliente";
+}
+<h1> Eliminar </h1>
+<h4> Are you sure you want to delete this? </h4>
+<div>
+	<h4>}REPARACION</h4>
+	<hr />
+	<dl class="row">
+		<dt class=" col-sm-2">
+			@Html.DisplayNameFor(model => model.Reparaciones.IdReparacion)
+		</dt>
+		<dd class="col-sm-2">
+			@Html.DisplayFor(model => model.Reparaciones.IdReparacion)
+		</dd>
+		<dt class=" col-sm-2">
+			@Html.DisplayNameFor(model => model.Reparaciones.Descripcion)
+		</dt>
+		<dd class="col-sm-2">
+			@Html.DisplayFor(model => model.Reparaciones.Descripcion)
+		</dd>
+		<dt class=" col-sm-2">
+			@Html.DisplayNameFor(model => model.Reparaciones.IdVehiculo)
+		</dt>
+		<dd class="col-sm-2">
+			@Html.DisplayFor(model => model.Reparaciones.IdVehiculo)
+		</dd>
+		<dt class=" col-sm-2">
+			@Html.DisplayNameFor(model => model.Reparaciones.Vehiculo)
+		</dt>
+		<dd class="col-sm-2">
+			@Html.DisplayFor(model => model.Reparaciones.Vehiculo)
+		</dd>
+		<dt class=" col-sm-2">
+			@Html.DisplayNameFor(model => model.Reparaciones.FechaInicio)
+		</dt>
+		<dd class="col-sm-2">
+			@Html.DisplayFor(model => model.Reparaciones.FechaInicio)
+		</dd>
+		<dt class=" col-sm-2">
+			@Html.DisplayNameFor(model => model.Reparaciones.FechaFin)
+		</dt>
+		<dd class="col-sm-2">
+			@Html.DisplayFor(model => model.Reparaciones.FechaFin)
+		</dd>
+		<dt class=" col-sm-2">
+			@Html.DisplayNameFor(model => model.Reparaciones.CostoEstimado)
+		</dt>
+		<dd class="col-sm-2">
+			@Html.DisplayFor(model => model.Reparaciones.CostoEstimado)
+		</dd>
+	</dl>
+	<form method="post">
+		<input type="hidden" asp-for="Reparaciones.IdReparacion" />
+		<input type="submit" value="Delete" class="btn btn-danger" />
+		<a asp-page="./Index" class=" btn btn-primary"> Back to list</a>
+	</form>
+</div>

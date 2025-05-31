@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Reparaciones\Delete\" />
+    <Folder Include="Pages\Reparaciones\Edit\" />
   </ItemGroup>
 
 </Project>
