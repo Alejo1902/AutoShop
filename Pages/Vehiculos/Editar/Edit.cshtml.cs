@@ -14,7 +14,7 @@ namespace AutoShop.Pages.Vehiculos.Editar
             _context = context;
         }
         [BindProperty]
-        public Vehiculo Vehiculo { get; set; } = default!;
+        public Vehiculos Vehiculo { get; set; } = default!;
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null || _context.Vehiculos == null)
@@ -42,7 +42,7 @@ namespace AutoShop.Pages.Vehiculos.Editar
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!VehiculoExists(Vehiculo.IdVehiculo))
+                if (!VehiculosExists(Vehiculo.IdVehiculo))
                 {
                     return NotFound();
                 }
@@ -55,7 +55,7 @@ namespace AutoShop.Pages.Vehiculos.Editar
         }
         private bool VehiculosExists(int id)
         {
-            return (_context.Vehiculos.Any(e => e.IdVehiculo == id)).GetValueOrDefault();
+            return (_context.Vehiculos.Any(e => e.IdVehiculo == id))
         }
     }
 }

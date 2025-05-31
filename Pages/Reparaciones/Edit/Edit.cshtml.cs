@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Razor;
 using AutoShopManager.Models;
 
-namespace AutoShop.Pages.Partes.Edit
+namespace AutoShop.Pages.Reparaciones.Edit
 {
     public class EditModel : PageModel
     {
@@ -15,20 +15,19 @@ namespace AutoShop.Pages.Partes.Edit
             _context = context;
         }
         [BindProperty]
-        public Parte Parte { get; set; } = default!; 
+        public Reparacion Reparacion { get; set; } = default!;
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Partes == null)
+            if (id == null || _context.Reparaciones == null)
             {
                 return NotFound();
             }
-
-            var partes = await _context.Partes.FirstOrDefaultAsync(m => m.IdParte == id);
-            if (partes == null)
+            var Reparaciones = await _context.Reparaciones.FirstOrDefaultAsync(m => m.IdReparacion == id);
+            if (Reparaciones == null)
             {
                 return NotFound();
             }
-            Parte = partes;
+            Reparaciones = Reparaciones;
             return Page();
         }
         public async Task<IActionResult> OnPostAsync()
@@ -37,14 +36,14 @@ namespace AutoShop.Pages.Partes.Edit
             {
                 return Page();
             }
-            _context.Attach(Parte).State = EntityState.Modified;
+            _context.Attach(Reparacion).State = EntityState.Modified;
             try
             {
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!PartesExists(Parte.IdParte)) 
+                if (!reparacionExists(Reparacion.IdReparacion))
                 {
                     return NotFound();
                 }
@@ -55,8 +54,9 @@ namespace AutoShop.Pages.Partes.Edit
             }
             return RedirectToPage("./Index");
         }
-        private bool PartesExists(int id)
-        {
-            return (_context.Partes?.Any(e => e.IdParte == id)).GetValueOrDefault();
+        private bool reparacionExists(int id)
+        { 
+            return _context.Partes.Any(e => e.IdParte == id);
+        }
     }
 }
