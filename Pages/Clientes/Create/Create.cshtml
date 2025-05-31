@@ -1,0 +1,49 @@
+﻿@page
+@model AutoShop.Pages.Clientes.Create.CreateModel
+@{
+	ViewData["Title"] = "Nuevo Cliente";
+}
+<h1>Nuevo Cliente</h1>
+<h4> CLIENTE </h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form method="post">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="Clientes.IdCliente"></label>
+				<input asp-for="Clientes.IdCliente" class="form-control" />
+				<span asp-validation-for="Clientes.IdCliente" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Clientes.Nombre"></label>
+				<input asp-for="Clientes.Nombre" class="form-control" />
+				<span asp-validation-for="Clientes.Nombre" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Clientes.Apellido"></label>
+				<input asp-for="Clientes.Apellido" class="form-control" />
+				<span asp-validation-for="Clientes.Apellido" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Clientes.Telefono"></label>
+				<input asp-for="Clientes.Telefono" class="form-control" />
+				<span asp-validation-for="Clientes.Telefono" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Clientes.Email"></label>
+				<input asp-for="Clientes.Email" class="form-control" />
+				<span asp-validation-for="Clientes.Email" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Clientes.Direccion"></label>
+				<input asp-for="Clientes.Direccion" class="form-control" />
+				<span asp-validation-for="Clientes.Direccion" class="text-danger"></span>
+			</div>
+		</form>
+	</div>
+</div>
+@section Scripts {
+		await Html.RenderPartialAsync("_ValidationScriptsPartial")
+
+}

@@ -1,0 +1,59 @@
+﻿@page
+@model AutoShop.Pages.Vehiculos.Crear.CreateModel
+@{
+	ViewData["Title"] = "Nuevo Vehículo";
+}
+<h1>Nuevo Vehículo</h1>
+<h4> VEHICULO </h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form method="post">
+			<div asp-validation-summary ="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="Vehiculos.Marca"></label>
+				<input asp-for="Vehiculos.Marca" class="form-control" />
+				<span asp-validation-for="Vehiculos.Marca" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Vehiculos.IdVehiculo"></label>
+				<input asp-for="Vehiculos.IdVehiculo" class="form-control" />
+				<span asp-validation-for="Vehiculos.IdVehiculo" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Vehiculos.Placa"></label>
+				<input asp-for="Vehiculos.Placa" class="form-control" />
+				<span asp-validation-for="Vehiculos.Placa" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Vehiculos.Modelo"></label>
+				<input asp-for="Vehiculos.Modelo" class="form-control" />
+				<span asp-validation-for="Vehiculos.Modelo" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Vehiculos.Anio"></label>
+				<input asp-for="Vehiculos.Anio" class="form-control" />
+				<span asp-validation-for="Vehiculos.Anio" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Vehiculos.Color"></label>
+				<input asp-for="Vehiculos.Color" class="form-control" />
+				<span asp-validation-for="Vehiculos.Color" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Vehiculos.IdCliente"></label>
+				<input asp-for="Vehiculos.IdCliente" class="form-control" />
+				<span asp-validation-for="Vehiculos.IdCliente" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Vehiculos.Cliente"></label>
+				<input asp-for="Vehiculos.Cliente" class="form-control" />
+				<span asp-validation-for="Vehiculos.Cliente" class="text-danger"></span>
+			</div>
+		</form>
+	</div>
+</div>
+@section Scripts {	
+	await Html.RenderPartialAsync("_ValidationScriptsPartial")
+
+}

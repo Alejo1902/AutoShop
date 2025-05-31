@@ -1,0 +1,38 @@
+﻿@page
+@model AutoShop.Pages.Reparaciones.IndexModel
+@{
+	ViewData["Title"] = "Reparaciones";
+}
+<h1>REPARACIONES </h1>
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Reparaciones[0].IdReparacion)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Reparaciones[0].Descripcion)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Reparaciones[0].IdVehiculo)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Reparaciones[0].Vehiculo)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Reparaciones[0].FechaInicio)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Reparaciones[0].FechaFin)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Reparaciones[0].CostoEstimado)
+			</th>
+			<td>
+				<a asp-page="./Edit" asp-route-id="IdReparacion" class="btn btn-Warning">Delete</a>"
+				<a asp-page="./Delete" asp-route-id="IdReparacion" class="btn btn-danger">Edit</a>"
+			</td>
+		</tr>
+
+	</thead>
+</table>

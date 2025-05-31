@@ -1,0 +1,35 @@
+﻿@page
+@model AutoShop.Pages.Partes.IndexModel
+@{
+	ViewData["Title"] = "Partes";
+}
+<h1>Partes </h1>
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Partes[0].IdParte)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Partes[0].Nombre)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Partes[0].NumeroParte)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Partes[0].Precio)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Partes[0].Stock)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Partes[0].Proveedor)
+			</th>
+			<td>
+				<a asp-page="./Edit" asp-route-id="IdParte" class="btn btn-Warning">Delete</a>"
+				<a asp-page="./Delete" asp-route-id="IdParte" class="btn btn-danger">Edit</a>"
+			</td>
+		</tr>
+
+	</thead>
+</table>

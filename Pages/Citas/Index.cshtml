@@ -1,0 +1,41 @@
+﻿@page
+@model AutoShop.Pages.Citas.IndexModel
+@{
+	ViewData["Title"] = "CITAS";
+}
+<h1>CITAS </h1>
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Citas[0].IdCita)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Citas[0].IdVehiculo)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Citas[0].Vehiculo)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Citas[0].IdCliente)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Citas[0].Cliente)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Citas[0].Fecha)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Citas[0].Hora)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Citas[0].DescripcionServicio)
+			</th>
+			<td>
+				<a asp-page="./Edit" asp-route-id="IdCita" class="btn btn-Warning">Delete</a>"
+				<a asp-page="./Delete" asp-route-id="IdCita" class="btn btn-danger">Edit</a>"
+			</td>
+		</tr>
+
+	</thead>
+</table>

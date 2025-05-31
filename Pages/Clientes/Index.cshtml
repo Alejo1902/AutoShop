@@ -1,0 +1,35 @@
+﻿@page
+@model AutoShop.Pages.Clientes.IndexModel
+@{
+	ViewData["Title"] = "Clientes";
+}
+<h1>Clientes </h1>
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Clientes[0].IdCliente)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Clientes[0].Nombre)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Clientes[0].Apellido)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Clientes[0].Telefono)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Clientes[0].Email)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Clientes[0].Direccion)
+			</th>
+			<td>
+				<a asp-page="./Edit" asp-route-id="IdClientes" class="btn btn-Warning">Delete</a>"
+				<a asp-page="./Delete" asp-route-id="IdCliente" class="btn btn-danger">Edit</a>"
+			</td>
+		</tr>
+
+	</thead>
+</table>
