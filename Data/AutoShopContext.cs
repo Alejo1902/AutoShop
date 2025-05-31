@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using AutoShopManager.Models;
+using AutoShop.Models;
 
 namespace AutoShopManager.Data
 {
@@ -15,8 +16,9 @@ namespace AutoShopManager.Data
         public DbSet<Reparacion> Reparaciones { get; set; }
         public DbSet<Partes> Partes { get; set; }
         public DbSet<Citas> Citas { get; set; }
+        public DbSet <Users> Users { get; set; }
 
-        
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
