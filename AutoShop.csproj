@@ -21,9 +21,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\Citas\Edit\" />
-    <Folder Include="Pages\Citas\Delete\" />
-  </ItemGroup>
-
 </Project>
