@@ -7,7 +7,7 @@ namespace AutoShopManager.Models
         [Key]
         public int IdParte { get; set; }
 
-        public string Nombre { get; set; }
+        public string Nombre  { get; set; }
 
         public string NumeroParte { get; set; }
 
