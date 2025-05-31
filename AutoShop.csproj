@@ -21,9 +21,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\Partes\Edit\" />
-    <Folder Include="Pages\Partes\Delete\" />
-  </ItemGroup>
-
 </Project>

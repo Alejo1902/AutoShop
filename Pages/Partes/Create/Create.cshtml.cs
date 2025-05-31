@@ -19,14 +19,14 @@ namespace AutoShop.Pages.Partes.Create
             return Page();
         }
         [BindProperty]
-        public Cliente Clientes { get; set; } = default!;
+        public partes partes { get; set; } = default!;
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid || _context.Vehiculos == null || Clientes == null)
+            if (!ModelState.IsValid || _context.Partes == null || partes == null)
             {
                 return Page();
             }
-            _context.Clientes.Add(Clientes);
+            _context.Partes.Add(partes);
             await _context.SaveChangesAsync();
             return RedirectToPage("./Index");
         }
