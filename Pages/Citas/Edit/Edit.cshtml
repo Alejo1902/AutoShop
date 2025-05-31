@@ -1,4 +1,59 @@
 ﻿@page
 @model AutoShop.Pages.Citas.Edit.EditModel
 @{
+	ViewData["Title"] = "Editar Cita";
+}
+<h1>Editar Citas</h1>
+<h4>CITAS</h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form method=" post">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			input type ="hidden" asp-for="Clientes.IdCliente" />
+			<div class="form-group">
+				<label asp-for="Citas.IdCitas"></label>
+				<input asp-for="Citas.IdCitas" class="form-control" />
+				<span asp-validation-for="Citas.IdCitas" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Citas.IdVehiculo"></label>
+				<input asp-for="Citas.IdVehiculo" class="form-control" />
+				<span asp-validation-for="Citas.IdVehiculo" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Citas.Vehiculo"></label>
+				<input asp-for="Citas.Vehiculo" class="form-control" />
+				<span asp-validation-for="Citas.Vehiculo" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Citas.IdCliente"></label>
+				<input asp-for="Citas.IdCliente" class="form-control" />
+				<span asp-validation-for="Citas.IdCliente" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Citas.Cliente"></label>
+				<input asp-for="Citas.Cliente" class="form-control" />
+				<span asp-validation-for="Citas.Cliente" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Citas.Fecha"></label>
+				<input asp-for="Citas.Fecha" class="form-control" />
+				<span asp-validation-for="Citas.Fecha" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Citas.Hora"></label>
+				<input asp-for="Citas.Hora" class="form-control" />
+				<span asp-validation-for="Citas.Hora" class="text-danger"></span>
+			</div>
+			<div class=" form-group">
+				<input type="submit" value="Save" class="btn btn-sucess" />
+				<a asp-page="./Index" class="btn btn-primary">Back to list</a>
+			</div>
+		</form>
+	</div>
+</div>
+@section Scripts {
+						await Html.RenderPartialAsync("_ValidationScriptsPartial")
+}
 }

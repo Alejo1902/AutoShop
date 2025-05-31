@@ -15,7 +15,7 @@ namespace AutoShop.Pages.Citas.Edit
             _context = context;
         }
         [BindProperty]
-        public Citas  Citas { get; set; } = default!;
+        public Citas Citas { get; set; } = default!;
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null || _context.Citas == null)
