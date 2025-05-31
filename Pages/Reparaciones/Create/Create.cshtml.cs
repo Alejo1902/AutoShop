@@ -22,7 +22,7 @@ namespace AutoShop.Pages.Reparaciones.Create
         public Reparacion Reparacion { get; set; } = default!;
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid || _context.Reparaciones == null || Reparacion == null)
+            if (!ModelState.IsValid || _context.Reparaciones  == null || Reparacion == null)
             {
                 return Page();
             }
