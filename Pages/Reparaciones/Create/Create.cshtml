@@ -1,0 +1,54 @@
+﻿@page
+@model AutoShop.Pages.Reparaciones.Create.CreateModel
+@{
+	ViewData["Title"] = "Nuevas Reparaciones";
+}
+<h1>Nuevo Reparacion</h1>
+<h4> Reparacion </h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form method="post">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="Reparacion.IdReparacion"></label>
+				<input asp-for="Reparacion.IdReparacion" class="form-control" />
+				<span asp-validation-for="Reparacion.IdReparacion" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Reparacion.Descripcion"></label>
+				<input asp-for="Reparacion.Descripcion" class="form-control" />
+				<span asp-validation-for="Reparacion.Descripcion" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Reparacion.IdVehiculo"></label>
+				<input asp-for="Reparacion.IdVehiculo" class="form-control" />
+				<span asp-validation-for="Reparacion.IdVehiculo" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Reparacion.Vehiculo"></label>
+				<input asp-for="Reparacion.Vehiculo" class="form-control" />
+				<span asp-validation-for="Reparacion.Vehiculo" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Reparacion.FechaInicio"></label>
+				<input asp-for="Reparacion.FechaInicio" class="form-control" />
+				<span asp-validation-for="Reparacion.FechaInicio" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Reparacion.FechaFin"></label>
+				<input asp-for="Reparacion.FechaFin" class="form-control" />
+				<span asp-validation-for="Reparacion.FechaFin" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="Reparacion.CostoEstimado"></label>
+				<input asp-for="Reparacion.CostoEstimado" class="form-control" />
+				<span asp-validation-for="Reparacion.CostoEstimado" class="text-danger"></span>
+			</div>
+		</form>
+	</div>
+</div>
+@section Scripts {
+				await Html.RenderPartialAsync("_ValidationScriptsPartial")
+
+}
