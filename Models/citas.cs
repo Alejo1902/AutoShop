@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace AutoShopManager.Models
 {
     public class Citas
-    {
+    { 
         [Key]
         public int IdCita { get; set; }
 
