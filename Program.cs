@@ -11,7 +11,7 @@ builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
-app.UseAuthentication(); // si usas autenticación
+app.UseAuthentication(); 
 app.UseAuthorization();
 
 app.MapRazorPages();
